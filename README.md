@@ -2,13 +2,14 @@
 
 ## Overview
 
-Pump Fun Sniper is a tool designed to simulate token transactions on the Solana blockchain. It supports buying and selling tokens on localnet, devnet, and testnet. The project is currently being extended to work with Jito Low Latency and PumpFun.
+Pump Fun Sniper is a tool designed to simulate token transactions on the Solana blockchain. It supports buying and selling tokens on localnet, devnet. The project is currently being extended to work with Jito Low Latency and PumpFun.
 
 ## Features
 
-- [x] **Buy/Sell on localnet/devnet/testnet**: DONE
+- [x] **Buy/Sell on localnet/devnet**: DONE
 - [ ] **Work with Jito Low Latency**: IN PROGRESS
 - [ ] **Work with PumpFun**: IN PROGRESS
+- [ ] **Retry logic**: NOT YET
 
 ## Getting Started
 
@@ -22,8 +23,8 @@ Pump Fun Sniper is a tool designed to simulate token transactions on the Solana 
 
 1. Clone the repository:
     ```sh
-    git clone <repository-url>
-    cd <repository-directory>
+    git clone https://github.com/tranquangkhai/pump-fun-sniper.git
+    cd pump-fun-sniper
     ```
 
 2. Install dependencies:
@@ -40,14 +41,9 @@ Pump Fun Sniper is a tool designed to simulate token transactions on the Solana 
 
 ### Usage
 
-1. Compile the TypeScript files:
+1. Run the sniper script:
     ```sh
-    npm run build
-    ```
-
-2. Run the sniper script:
-    ```sh
-    node built/sniper.js
+    ts-node sniper.js
     ```
 
 ### Configuration
@@ -62,17 +58,13 @@ The following Private Key will be automatically generated.
 - `SELLER_WALLET`: Private key of the seller wallet.
 - `BUYER_WALLET`: Private key of the buyer wallet.
 
-### Example
+### Simulation
 
 To simulate a token purchase and sell, run the  script. The script will:
 
 1. Create a mint token with the seller wallet.
 2. Simulate a token purchase where the parent wallet buys tokens from the seller wallet.
 3. Simulate a token sell where the parent wallet sells tokens to the buyer wallet.
-
-### Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request.
 
 ### License
 

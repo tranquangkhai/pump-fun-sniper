@@ -211,14 +211,14 @@ async function main() {
   // Create parent wallet and add it to the environment file
   const parentWallet = await initializeKeypair(connection, {
     envVariableName: "PARENT_WALLET",
-    airdropAmount: LAMPORTS_PER_SOL * 0.01,
+    airdropAmount: LAMPORTS_PER_SOL * 2.0,
     minimumBalance: LAMPORTS_PER_SOL * 0.01,
   }
   );
 
   console.log("Parent wallet address: ", parentWallet.publicKey.toBase58());
 
-  // Create 10 child wallets and add them to the environment file
+  // Create 2 child wallets and add them to the environment file
   const childWallets = [];
   for (let i = 0; i < 2; i++) {
     const childWallet = await initializeKeypair(connection, {
@@ -243,7 +243,7 @@ async function main() {
   // Create a seller wallet
   const sellerWallet = await initializeKeypair(connection, {
     envVariableName: "SELLER_WALLET",
-    airdropAmount: LAMPORTS_PER_SOL * 0.01,
+    airdropAmount: LAMPORTS_PER_SOL * 2.0,
     minimumBalance: LAMPORTS_PER_SOL * 0.01,
   }
   )
@@ -267,7 +267,7 @@ async function main() {
   // Create a buyer wallet
   const buyerWallet = await initializeKeypair(connection, {
     envVariableName: "BUYER_WALLET",
-    airdropAmount: LAMPORTS_PER_SOL * 0.01,
+    airdropAmount: LAMPORTS_PER_SOL * 2.0,
     minimumBalance: LAMPORTS_PER_SOL * 0.01,
   }
   )
